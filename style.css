@@ -37,7 +37,19 @@ body {
     margin-bottom: 300px;
     width: 60%;
 }
-
+.citation1{
+    font-family: "Lekton", monospace;
+    font-weight: 100;
+    font-style: normal;
+    width: 30%;
+    margin-top: 1000px;
+}
+.citation2{
+    font-family: "Lekton", monospace;
+    font-weight: 100;
+    font-style: normal;
+    width: 30%;
+}
 h2 {
     font-family: "Londrina Shadow", sans-serif;
     font-weight: 400;
