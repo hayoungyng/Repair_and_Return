@@ -1,0 +1,253 @@
+body {
+    font-family: "Lekton", monospace;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 50px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.introduction{
+    margin-top: 300px;
+    margin-bottom: 1000px;
+    width: 60%;
+}
+
+.bodyparagraph{
+    margin-top: 200px;
+    margin-bottom: 300px;
+    width: 70%;
+}
+.upper-bodyparagraph{
+    margin-top: 200px;
+    width: 60%;
+}
+.middle-bodyparagraph{
+    width: 60%;
+}
+.following-bodyparagraph{
+    margin-bottom: 300px;
+    width: 60%;
+}
+
+h2 {
+    font-family: "Londrina Shadow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Londrina Outline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title {
+    font-family: "Rock 3D", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: transparent;
+    position: flex;
+    top: 5px;
+    left: 5px;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 100px;
+    stroke: black;
+}
+
+.quotes-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    max-width: 1200px;
+    margin-bottom: 100px;
+}
+
+.quote-container1 {
+    position: relative;
+    align-items: right;
+    text-align: right;
+    width: 80%;
+    cursor: pointer;
+    animation: floatAnimation 4s infinite ease-in-out alternate;
+}
+
+.quote-container1:nth-child(1) {
+    position: absolute;
+    animation-delay: 0s;
+    right: 15vw;
+    padding: 100;
+}
+
+.quote-container2 {
+    position: relative;
+    align-items: left;
+    text-align: left;
+    width: 80%;
+    cursor: pointer;
+    animation: floatAnimation 4s infinite ease-in-out alternate;
+}
+
+.quote-container2:nth-child(2) {
+    position: absolute;
+    animation-delay: 1s;
+    margin: 100;
+}
+
+.quote-container3 {
+    position: relative;
+    align-items: right;
+    text-align: right;
+    width: 80%;
+    cursor: pointer;
+    animation: floatAnimation 4s infinite ease-in-out alternate;
+}
+
+.quote-container1:nth-child(3) {
+    position: absolute;
+    animation-delay: 0s;
+    right: 15vw;
+    padding: 100;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+.quote-container1 h2 {
+    position: relative;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+    background: none;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.quote-container1 h3 {
+    font-size: 2vw;
+    color: #333;
+    margin: 10px 0;
+    background: none;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.quote-container1:hover .hidden-text {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.quote-container2 h2 {
+    position: relative;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+    background: none;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.quote-container2 h3 {
+    font-size: 2vw;
+    color: #333;
+    margin: 10px 0;
+    background: none;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.quote-container2:hover .hidden-text {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.quote-container3 h2 {
+    position: relative;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+    background: none;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.quote-container3 h3 {
+    font-size: 2vw;
+    color: #333;
+    margin: 10px 0;
+    background: none;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.quote-container3:hover .hidden-text {
+    max-height: 300px;
+    opacity: 1;
+}
+
+
+.hidden-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    font-size: 1vw;
+    color: #333;
+    margin-top: 5px;
+}
+
+.quote-container1.active .hidden-text {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.quote-container2.active .hidden-text {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.quote-container3.active .hidden-text {
+    max-height: 200px;
+    opacity: 1;
+}
+
+#stitchCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+img {
+    opacity: 50%;
+}
