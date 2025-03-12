@@ -40,15 +40,17 @@ body {
 .citation1{
     font-family: "Lekton", monospace;
     font-weight: 100;
+    font-size: x-small;
     font-style: normal;
-    width: 30%;
+    width: 60%;
     margin-top: 1000px;
 }
 .citation2{
     font-family: "Lekton", monospace;
     font-weight: 100;
+    font-size: x-small;
     font-style: normal;
-    width: 30%;
+    width: 60%;
 }
 h2 {
     font-family: "Londrina Shadow", sans-serif;
@@ -264,4 +266,24 @@ h3 {
 
 img {
     opacity: 50%;
+}
+.PhantomIMG{
+    max-width: 40%;
+    opacity: 100%;
+}
+.BrainTunnel{
+    max-width: 60%;
+    opacity: 100%;
+}
+.image-container {
+    text-align: center; /* Centers the image and caption */
+    margin: 20px 0; /* Adds spacing above and below */
+}
+
+.image-caption {
+    font-size: 0.8em; /* Makes the text smaller */
+    color: #555; /* Light gray color */
+    margin-top: 30px;
+    text-align: center;
+    font-style: italic; /* Optional: Makes the caption italic */
 }
