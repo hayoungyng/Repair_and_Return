@@ -15,7 +15,7 @@ resizeCanvas();
 let lastX = null;
 let lastY = null;
 let lastTime = 0;
-const stitchInterval = 20;
+const stitchInterval = 10;
 const stitchSpacing = 20;
 const stitches = [];
 const fadeDuration = 5000;
