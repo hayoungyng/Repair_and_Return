@@ -1,6 +1,7 @@
 body {
     font-family: "Lekton", monospace;
     font-weight: 300;
+    font-size: 14px;
     font-style: normal;
     display: flex;
     flex-direction: column;
@@ -301,20 +302,22 @@ canvas {
 .EssayBodyContents {
     margin: 0 auto;
     position: relative;
-    width: 60%;
+    width: 50%;
     line-height: 1.2;
     margin-bottom: 30px;
     padding-bottom: 10px;
+    text-align: justify ;
 }
 
 .Paragraph14px {
     font-size: 14px;
+    text-align: justify;
 }
 
 .ParallelParagraph14px {
     width: 75%;
     font-size: 14px;
-    text-align: left;
+    text-align: justify;
     margin-right: 0px;
     margin-left: auto;
     margin-top: 50px;
@@ -348,6 +351,7 @@ canvas {
     font-size: x-small;
     font-style: normal;
     margin-top: 1300px;
+    text-align: justify;
 }
 
 .citation {
@@ -355,6 +359,7 @@ canvas {
     font-weight: 100;
     font-size: x-small;
     font-style: normal;
+    text-align: justify;
 }
 
 
@@ -363,8 +368,8 @@ h1 {
     font-weight: 800;
     font-style: normal;
     align-items: center;
-    text-align: center;
     padding: 30px;
+    text-align: center;
 }
 
 h2 {
@@ -382,6 +387,7 @@ h2 {
 .parallelDescription {
     font-family: "Shizuru", system-ui;
     padding: 60px;
+    text-align: left;
 }
 
 .parallelquote {
@@ -394,6 +400,7 @@ h3 {
     font-weight: 400;
     font-style: normal;
 }
+
 
 .title {
     font-family: "Rock 3D", system-ui;
@@ -462,7 +469,7 @@ h3 {
     position: relative;
     align-items: center;
     text-align: center;
-    width: 60%;
+    width: 50%;
     margin-top: 0px;
     margin-bottom: 30px;
     padding-bottom: 10px;
@@ -507,7 +514,7 @@ h3 {
 }
 
 .quote-container1:hover .hidden-text {
-    max-height: 300px;
+    max-height: 900px;
     opacity: 1;
     align-items: right;
     align-content: right;
@@ -534,7 +541,7 @@ h3 {
 }
 
 .quote-container2:hover .hidden-text2 {
-    max-height: 300px;
+    max-height: 1200px;
     opacity: 1;
 }
 
@@ -559,7 +566,7 @@ h3 {
 }
 
 .EssayBodyHidden:hover .EssayBodyhidden-text {
-    max-height: 500px;
+    max-height: 1200px;
     opacity: 1;
 }
 
@@ -572,7 +579,7 @@ h3 {
     font-size: 14px;
     color: #626262;
     margin-top: 5px;
-    text-align: left;
+    text-align: justify;
     margin-right: 0;
     margin-left: auto;
     padding: 20px;
@@ -582,7 +589,7 @@ h3 {
 }
 
 .hidden-text.active {
-    max-height: 500px;
+    max-height: 900px;
     opacity: 1;
     transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
@@ -595,7 +602,7 @@ h3 {
     font-size: 14px;
     color: #626262;
     margin-top: 5px;
-    text-align: left;
+    text-align: justify;
     margin-right: auto;
     margin-left: 0;
     padding: 20px;
@@ -605,7 +612,7 @@ h3 {
 }
 
 .hidden-text2.active {
-    max-height: 500px;
+    max-height: 900px;
     opacity: 1;
     transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
@@ -619,7 +626,7 @@ h3 {
     color: #626262;
     margin-top: 50px;
     width: 80%;
-    text-align: left;
+    text-align: justify;
     padding: 20px;
     border-left-style: dashed;
     border-left-color: #626262;
@@ -639,7 +646,7 @@ h3 {
 
 
 .EssayBodyhidden-text.active {
-    max-height: 500px;
+    max-height: 1200px;
     opacity: 1;
     transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
@@ -647,7 +654,7 @@ h3 {
 .quote-container1.active .hidden-text,
 .quote-container2.active .hidden-text2,
 .EssayBodyHidden.active .EssayBodyhidden-text {
-    max-height: 200px;
+    max-height: 1200px;
     opacity: 1;
 }
 
@@ -799,7 +806,7 @@ img {
 }
 
 .BrainTunnel {
-    max-width: 60%;
+    max-width: 40%;
     opacity: 100%;
     animation: floatAnimation 2s infinite ease-in-out alternate;
 }
@@ -906,10 +913,10 @@ img {
 
 
 .HandDirt {
-    width: 50%;
-    opacity: 90%;
+    width: 40%;
+    opacity: 70%;
     margin-right: 0%;
-    margin-left: 50%;
+    margin-left: 60%;
     animation: watercolorEffect00 8s infinite ease-in-out alternate;
 }
 
@@ -977,12 +984,12 @@ img {
 
 /* 이미지에 수채화 물감처럼 스며드는 애니메이션 */
 .FleshandMetal {
-    max-width: 80%;
+    max-width: 70%;
     opacity: 0;
     /* 처음에는 투명하게 시작 */
     margin-right: 0%;
     /* 오른쪽 여백을 0으로 설정 */
-    margin-left: 20%;
+    margin-left: 30%;
     animation: watercolorEffect05 8s infinite ease-in-out alternate;
     /* 애니메이션 추가 */
 }
