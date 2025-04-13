@@ -56,7 +56,7 @@ canvas {
     align-items: right;
     text-align: right;
     width: 100%;
-    font-size: 1vw;
+    font-size: 10px;
 }
 
 .clicknote {
