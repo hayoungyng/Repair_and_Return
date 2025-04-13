@@ -915,6 +915,28 @@ img {
 
 
 
+
+
+.gif-container {
+    text-align: center; /* 중앙 정렬 */
+}
+
+.gifcontainerimg {
+    width: 70%; /* GIF 크기 설정 */
+    opacity: 100%;
+    margin-right: 0%;
+    margin-left: 30%;
+    height: auto; /* 비율을 유지하면서 높이를 자동으로 설정 */
+    border-radius: 10px; /* GIF의 둥근 모서리 */
+}
+
+
+
+
+
+
+
+
 .Prosthetics01 {
     width: 50%;
     opacity: 90%;
