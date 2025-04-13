@@ -28,7 +28,7 @@ resizeCanvas(); // 초기화 시 한번 실행
 let lastX = null;
 let lastY = null;
 let lastTime = 0;
-const stitchInterval = 10; // 속도 문제 해결을 위한 간격 설정
+const stitchInterval = 1; // 속도 문제 해결을 위한 간격 설정
 const stitchSpacing = 20; // 스티치 간격
 const stitches = [];
 const fadeDuration = 5000;
