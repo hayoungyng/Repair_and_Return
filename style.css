@@ -905,6 +905,16 @@ img {
 }
 
 
+.HandDirt {
+    width: 50%;
+    opacity: 90%;
+    margin-right: 0%;
+    margin-left: 50%;
+    animation: watercolorEffect00 8s infinite ease-in-out alternate;
+}
+
+
+
 .Prosthetics01 {
     width: 50%;
     opacity: 90%;
