@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Cutive+Mono&family=Lekton:ital,wght@0,400;0,700;1,400&family=Londrina+Outline&family=Londrina+Shadow&family=Rock+3D&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Cutive+Mono&family=Lekton:ital,wght@0,400;0,700;1,400&family=Londrina+Outline&family=Londrina+Shadow&family=Rock+3D&family=Shizuru&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -22,180 +22,721 @@
 </head>
 
 <body>
+    <canvas id="skinTextureCanvas"></canvas>
     <canvas id="stitchCanvas"></canvas>
-    <img class="hero" src="images/spatial_repair5.jpg" alt="Spatial Repair">
+    <canvas id="cellCanvas"></canvas>
+
+    <img class="Hero" src="images/Hero.png" alt="Skin">
+
+
+
     <h1 class="title">Repair and Return</h1>
 
-    <p class="introduction">
-        <b>Phantom limb pain</b> is more than a physical sensation, it is an <b>embodied trauma</b>, where the body
-        remembers what
-        has been lost. Similarly, <b>the act of digging</b> tunnels in Underground Gaza represents a collective response
-        to the
-        forced
-        amputation of land, history, and community. Both phenomena <b>desire to reconnect one within the embodied
-            memories</b> of
-        nerve system, the other within the land, culture and home. Just as the body experiences pain in an absent limb,
-        displaced
-        communities instinctively carve pathways to reclaim their existence and familiarities they used to have. These
-        acts reflect resilience,
-        resistance, and the persistence of memory.
+    <p class="name">
+        _ __ _ _ __ ___Web_Essay__ _ ___ by_ __ _ _ ___Hayoung__ _Yang__ _ _ ___ __ _
     </p>
+
+
+
+    <h2 class="spacing">|</h2>
+    <h2 class="spacing">|</h2>
+    <h2 class="spacing">|</h2>
+    <h2 class="spacing">|</h2>
+    <h2 class="spacing">|</h2>
+    <h2 class="spacing">|</h2>
+    <h2 class="spacing">|</h2>
+    <div class="EssayBodyContents">
+        <h1>Chapter 0 [Air] : To Begin</h1>
+        <p>
+            Phantom limb pain is not just a question of feeling, it is a bodily memory of the trauma that the body has
+            incurred. This parallels the body of Gaza, Palestine where being amputated into rubble under the decades of
+            systemic occupation, restriction, destruction and genocide. On the ground of amputated land, a group of
+            bodies in Gaza is experiencing a collective pain of no longer existing land, culture, home and community,
+            they used to innately own just as their body part they are born with.
+        </p>
+        <p>
+            Both the experiences talk about a profound, unconscious desire to be one with the nerve system, the other
+            with the land. As an amputee continues to feel the absence of a limb, an affected community suffers from a
+            ‘phantom pain’ of absence, the desire to go back to the known territory of liberty and identity that they
+            used to take as a right as a part of their body.
+        </p>
+        <p>
+            The act of digging is not just a physical activity but is also a concept of searching, investigating and
+            reaching for memory or space to retrieve what was taken. The tunnels in Gaza are the nerve pathways that
+            feel for a missing limb, hollow negative spaces excavated and created intentionally, to contain new memories
+            and intentions as a vessel -like the body refusing to accept loss, intention of refusing to accept forced
+            absence.
+        </p>
+        <p>
+            In this sense, the act of digging is a way of retrieving the embodied memories in the same manner that the
+            feeling of a phantom limb is the way of one’s body trying to seek for what was there. In these parallel two
+            cases, that of bodily pain or physical excavation, there is a persistent memory, a strong will to act, and
+            an embodied claim of existence against forced deletion.
+        </p>
+    </div>
+
+
+    <div id="keywords-section">
+        <p class="dictionary">DICTIONARY</p>
+
+        <p class="keyword01">
+            <a href="#keyword1">__ _ Act__ of__Digging_ ___ __</a>
+        </p>
+        <p class="keyword02">
+            <a href="#keyword2">_ Amputation__ _ ___ _ __ _ ___</a>
+        </p>
+        <p class="keyword03">
+            <a href="#keyword3">___ _ _ Embodied __ ___ Trauma __</a>
+        </p>
+        <p class="keyword01">
+            <a href="#keyword4">Phantom___ _ __ ___ __ _ __</a>
+        </p>
+        <p class="keyword02">
+            <a href="#keyword5">__ Prosthetics __ _ _ ___ _ __</a>
+        </p>
+        <p class="clickDictionary">
+            __✳︎_Click Each Words and Move to In-Depth Definition__✳︎</p>
+        <img class="SkinTexture02" src="images/skin_texture02.png" alt="Skin">
+
+    </div>
+
 
     <img class="PhantomIMG" src="images/AmputatedLeg.png" alt="Amputated Leg">
 
-    <div class="quote-container1" onclick="toggleText(this)">
-        <h2 class="mainquote">
-            Phantom Limb Pain
-        </h2>
-        <h3>
-            <i>"Memory for Pain. The amputation of a limb represents a serious disruption of body integrity and is
-                associated with a
-                number of negative consequences, particularly disability and postamputation pain. (Fuchs et.al, 2018, p.
-                1)"</i>
-        </h3>
-        <p class="hidden-text">
-            <i>"Several theories of chronic pain suggest that both declarative and nondeclarative memory processes
-                contribute to the development and maintenance of chronic pain via neuroplastic changes in the nervous
-                system [81–83]. One example for this process is central sensitization, referring to a hyperexcitability
-                of the central nervous system and associated lowered pain thresholds [84]. In different groups with
-                chronic pain, structural and functional reorganization within pain-processing brain areas has been
-                shown, which might represent a neural correlate of pain memory [81, 85, 86].</i>
+    <div class="EssayBodyContents">
+        <p>
+        <h1>Chapter 1 [Head] : Phantom Limb Pain</h1>
+        <b>Phantom limb pain(PLP)</b> is a condition in which the brain still generates sensations
+        that a person believes to still be in a missing amputated limb. Despite the physical absence of the limb,
+        individuals experience vivid and often painful sensations as if the limb still exists. These sensations,
+        including pain, tingling, itching, or even the feeling of movement, can occur long after the amputation, causing
+        a disconnection between the body’s physical reality and the brain’s perception<i>(Fuchs et al. p.1)</i>. PLP is
+        not a
+        simple neurological problem, but a complex interaction between the body and the mind that remembers the whole.
         </p>
-        <p class="hidden-text">
-            <i>Katz and Melzack [61] and Katz [87] proposed a crucial role of somatosensory memories for both PLP and
-                nonpainful phantom phenomena (e.g., phantom limb awareness or phantom sensations). Anderson-Barnes et
-                al. [88] suggested that phantom sensations could be explained by proprioceptive memories and that they
-                might become associated with pain perceived before the amputation by means of learning mechanisms.</i>
+        As Fuchs et al. state, ,<i><b>“Where the body remembers what has been lost.”</b></i> This quote captures the
+        essence of PLP: it
+        is not only a perception but a form of embodied memory. The body, in a way, does not want to lose the limb, and
+        thus continues to remember the limb in painful and non-painful ways. The inherent passivity in this experience
+        is the fact that the body’s memory of the lost limb is involuntary; the pain or even the feeling of presence is
+        the aftermath of a trauma.
+        <p>
+
         </p>
-        <p class="hidden-text">
-            <i>Melzack [61] suggested that pain prior to the amputation is encoded and can later be triggered, for
-                example, by peripheral input stemming from the residual limb. This triggered preamputation pain is then
-                experienced as PLP. Maladaptive plasticity that is positively correlated with PLP [65] can be seen as
-                neural underpinning of pain memory in amputees. These processes might be more severe if chronic pain has
-                already been present prior to amputation [81, 85, 86], potentially influencing the formation of a pain
-                memory. </i>
+    </div>
+
+    <p class="click">
+        _ _ ___ _ __ ___ _ __✳︎_Click__Floating__Words_to__Open_and__Hold!___ _ __ _ ____</p>
+    <p class="clickAgain">
+        _ __✳︎_If Hidden Text does not open,__ ___ _ _ __ Please Scroll Down A Bit - _ __</p>
+    <p class="clickAgain">
+        __ _ _- Scroll Up -__ Bring Your Cursor Slowly,_ ___ _ and Click Again!__ _ _ __</p>
+
+    <div class="EssayBodyHidden" onclick="toggleText(this)">
+        <h2 class="mainquote" onclick="toggleText(this)">The Neurological Basis of PLP?</h2>
+
+        <p class="EssayBodyhidden-text">
+            The neurological basis of PLP is based on how the brain processes the sensory information from the body.
+            When a limb is amputated, the brain does not delete the neural pathways associated with it. Instead, these
+            neural circuits keep the “memory” of the lost limb and may continue to fire and cause the pain or the
+            feeling of presence. This is related to the somatosensory memories of the affected limb, sensations that the
+            brain stores even when the limb is no longer present in the body (Fuchs et al. p.5).
         </p>
-        <p class="hidden-text">
-            <i>The theory of a relationship between pre amputation pain (that leaves behind a memory trace) and
-                PLP is supported by retrospective reports that have shown similarities between memories referring to
-                somatosensory perceptions in the affected limb in the phase before amputation and later phantom
-                sensations [60, 61]. </i>
-            <br> (Fuchs et.al, 2018, p. 5)
+        <p class="EssayBodyhidden-text">
+            Pre-amputation pain is also a trigger for PLP. Studies show that the pain that a patient experiences before
+            the amputation can persist as PLP after the surgery. This means that the brain does not simply delete the
+            memory of pain from the affected limb, but instead keeps a neural imprint of pain that makes the pain seem
+            continuous. This relationship is theory-driven and has been evidenced through retrospective accounts which
+            state that the phantom limb sensations are similar to the pain or other sensations that the patient felt in
+            the limb before it was amputated (Fuchs et al. p.5). The body’s memory of pre-amputation pain can be in such
+            a way that it persists and haunts the individual, and thus, PLP is both a psychological and physical
+            phenomenon.
         </p>
-        <h2>|</h2>
-        <h2>|</h2>
-        <h2>|</h2>
+    </div>
+
+
+    <div class="EssayBodyHidden" onclick="toggleText(this)">
+        <h2 class="mainquote" onclick="toggleText(this)">What is Loss and Absence?</h2>
+
+        <p class="EssayBodyhidden-text">
+            PLP is not just a passive perception, but it is an active, though instinctive, psychosomatic expression of
+            trauma. It is both inhabitation and use of the space of the body. The phenomenon shows how the body is
+            closely related to its perception of integrity. Although the limb is missing, the mind and body still have a
+            connection to it, and hence, there is a kind of “phantom sensation”, a feeling of being there when there is
+            none. This is a painful memento of loss, not just a transient one, but a lasting one that does not want to
+            be forgotten.
+        </p>
+        <p class="EssayBodyhidden-text">
+            In this way, PLP goes beyond the physical, however it becomes traumatic. The brain’s persistence in
+            recalling a missing limb is a manifestation of the body’s refusal to acknowledge the absence, as if the body
+            itself is fighting the idea of finality in loss. The trauma is not only felt at the time of the amputation,
+            but it also reverberates especially when the patient still feels the limb. Thus, the pain or the feeling of
+            the phantom limb is not only a neurologic event, however it is a symbol of the body’s trauma and its attempt
+            to keep what is no longer there.
+        </p>
+        <p class="EssayBodyhidden-text">
+            This embodied memory, closely linked to both the somatic and the psychological, is a crucial aspect of why
+            PLP is compelling to be considered as an bodily experience. The persistence of the phantom limb is an
+            example of how the body is scarred by the trauma of losing a limb and how the memory of pain or presence
+            continues to influence the individual’s life even after the limb has been amputated.
+        </p>
+
+    </div>
+
+    <div class="EssayBodyContents">
+        <p>
+            The human body shows deep interactions between physical and mental elements when experiencing traumatic loss
+            through phantom limb pain. PLP shows us through its underlying passivity that the body maintains awareness
+            of the missing limb while the mind along with neural patterns continue to retain memories of the lost limb
+            after amputation. The physical memory of pain functions beyond neurological responses because it creates an
+            internal experience that perpetually reminds the body about past trauma. PLP demonstrates how both the
+            physical body and mental self resist forgetting through the scars left by experience of loss.
+        <p>
+
+        </p>
+    </div>
+    <h2>|</h2>
+    <h2>|</h2>
+    <h2>|</h2>
+
+
+
+
+
+
+
+    <div class="EssayBodyContents">
+        <p>
+        <h1>Chapter 2 [Shoulder] : Amputated Gaza</h1>
+        <b>Gaza as a city, as body, as a group of bodies, as a limb,</b> is being amputated, throughout decades of
+        occupation and violence. <b>Gaza as a body,</b> has experienced various types of loss of its land, culture,
+        community and
+        freedom, and its social rupture which is now unwillingly fragmented into pieces of rubble (Shalhoub, 2024). The
+        systematic erasure of
+        cultural elements has brought a disconnection, where the continuity of life, history, and heritage has been
+        violently interrupted (Shalhoub, 2024).
+        </p>
+        <p>
+            Physical destruction of each <b>bodies’</b> <i>“home”</i> along with displacement of families and reduction
+            of vibrant
+            communities they once had - to now rubbles, demonstrate multiple amputations within <b>a group of bodies</b>
+            in
+            Gaza. With amputated <b>Gaza as limbs,</b> <b>group of bodies</b> in Gaza is experiencing a shared
+            <b>"phantom pain"</b> of no
+            longer existing <i>“sense of home”</i> in which they used to own, familiarities that were coming from a
+            family and
+            community they used to belong, just as amputees feeling and missing their absent limbs.
+        </p>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+
+        <h2>The Significance of The Act of Digging in Gaza</h2>
+        <p class="Paragraph14px">
+            The act of digging in Gaza is <i>more than just a physical activity</i>, however it embodies a form of
+            <b>resistance</b>, and a search for missing fragments they have unwillingly lost. This particular form of
+            digging a tunnel in
+            Gaza could be seen as a type of <b>reaction to the amputation</b> that exists in this context. According to
+            the
+            testimonies from Gazans who has been to, or actually used the existing tunnel underground Gaza for certain
+            reason, these tunnels were dug and built from the aim to re-establish their connection with lost freedom
+            such as a right to travel without going through multiple checkpoints, or easier transportation of goods
+            -materials for craft coming from adjacent countries such as Egypt Cairo- and crafts (Gharbiha, 2024;
+            QamariaCraftsman, 2024).
+        </p>
+
+        <p class="Paragraph14px">
+            While digging a tunnel could be seen as a response to a lack of mobility or a transportation route, it also
+            contains a significant meaning throughout their tunnel networks. Within the context of Gaza, the tunnels are
+            not just existing as a passage, however they are being a vessel where a community engages in a reclamation
+            of the past, a way to resist being erased from history (Gharbiha, 2024). These tunnels become metaphysical
+            channels through
+            which memories of pre-occupation life, familial bonds, and continuing the cultural practices including
+            crafts, despite the surrounding systemic violences to interrupt and erase these connections, linking the
+            entire body of Gaza.
+        </p>
+
+        <p class="Paragraph14px">
+            Digging conceives a concept of outwarding activity which opposes the underlying passivity of phantom limb
+            pain (PLP). The experience of PLP emerges from the passive memories of lost things that the body stores in
+            its sensory experiences (Fuchs et al. p.5). The intentional process of digging functions as an active
+            pursuit to find things
+            that have been taken. PLP demonstrates an internal battle with loss and absence while the act of digging in
+            Gaza functions as an external activity of refusal to passively remain and accepting forced disappearance.
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="EssayBodyContents">
+        <p>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h1>Chapter 3 [Knee] : Defining The Parallel</h1>
+        <h2>Inception of Digging In-Depth</h2>
+        To categorise <b>parallel aspects</b> between <b>PLP</b> and the act of digging in Gaza, it is necessary to
+        analyse and
+        clarify key terms within both contexts of PLP and Gaza. These terms– 1. Embodied trauma, 2. Amputation, 3.
+        Phantom, 4. The act of digging, and 5. Prosthetics– play a central role in understanding how both phenomena
+        can be seen as an insistence of not to accept the loss of something whether it is a physical part of a body or
+        the social, cultural, and political fabric of one land and community. From analysing these concepts within both
+        specific contexts, it is able to find the deeper links between the experience of PLP and the sufferings of
+        communities in Gaza.
+        </p>
+        <h2 class="TitleQuote">"We Need To Go Deeper." _[Inception, 2010]</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <p class="Paragraph14px">
+        <h2 class="parallelDescription">Defining and Categorising Key Terms in the Parallel Context of Phantom Limb
+            Pain(PLP) and the Act of Digging
+            in Gaza</h2>
+
+        <div class="quote-container2" onclick="toggleText(this)">
+            <div id="keyword3" class="section">
+                <h2 class="mainquote" onclick="toggleText(this)">1. Embodied Trauma</h2>
+            </div>
+            <h3>Digging is a methodology, where is seen as a craft that has to be mastered, where the methods of
+                tunnel digging are based on years of craftsmanship and ingenuity.
+            </h3>
+
+            <h2 class="parallelquote" onclick="toggleText(this)">In PLP</h2>
+            <p class="hidden-text2">
+                Within the context of PLP, embodied trauma is the pain and sensorial experiences that occur both before
+                and after amputation. This pain is not only physical but also psychological, linked to the memory of the
+                missing body part. The trauma is due to the sensory system of the body trying to make sense of the loss
+                and the brain still ‘feeling’ sensations that are no longer there. It is observed in sensation
+                experiences where the individual remembers the limb even though it is no longer there and still
+                experiences pain, itching or tingling as if the limb was still there (Fuchs et al. p.1).
+            </p>
+
+            <h2 class="parallelquote" onclick="toggleText(this)">In GAZA</h2>
+            <p class="hidden-text2">
+                In Gaza, embodied trauma is also different but similar in that, it also applies across generations.
+                Trauma is not just an individuals’ bodily experience, however it is more likely collectively getting
+                haunted and feeling pain, and it is rooted in the experience of displacement after being amputated from
+                own houses one have built bit by bit, repeating violence and oppression that are being repeated for
+                decades (Shalhoub, 2024). People of Gaza are seeing and feeling the phantom of what has been torn out
+                from them.
+            </p>
+            <p class="hidden-text2">
+                As Nadera Shalhoub explains in the video “There is So Much Love in Palestine”, the trauma of losing
+                homes, family members and basic rights as a human being is internalised in the daily acts of resistance.
+                [I will elaborate this with specific quotes from Nadera(Shalhoub, 2024)] The trauma is experienced in
+                action (bodily) embodied experiences where the community engages in the process of digging (- to be
+                elaborated at 4. The Act of Digging) as a way of resisting and affirming their presence against the
+                forced loss of their
+                land and identity. Just as with phantom limb pain, the act of digging is a reaction to an unresolved,
+                ongoing trauma.
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="sticky-video-container01">
+        <div class="image-container">
+            <a href="https://www.youtube.com/watch?v=cw3Y-6GqytM" target="_blank">
+                <img class="shalhoubvideo" src="images/ShalhoubVideo.png" alt="Click to start the video">
+            </a>
+            <p class="shalhoubvideocaption">Click to start "There is So Much Love in Palestine" with Nadera Shalhoub,
+                Mar 2024</p>
+        </div>
+    </div>
+
+    <img class="SkinTexture01" src="images/skin_texture01.png" alt="Watercolor Effect Image">
+
+
+    <div class="invisiblespacing">
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+    </div>
+
+
+
+    <div class="EssayBodyContents">
+        <p>
+        <div class="quote-container1" onclick="toggleText(this)">
+            <div id="keyword2" class="section">
+                <h2 class="mainquote" onclick="toggleText(this)">
+                    2. Amputation
+                </h2>
+            </div>
+            <h3>
+                <i>"Memory for Pain. The amputation of a limb represents a serious disruption of body integrity and
+                    is
+                    associated with a
+                    number of negative consequences, particularly disability and postamputation pain. (Fuchs et.al,
+                    2018, p.
+                    1)"</i>
+            </h3>
+
+            <h2 class="parallelquote" onclick="toggleText(this)">In PLP</h2>
+
+            <p class="hidden-text">
+                Amputation in PLP is the actual removal of a body part, usually a limb. It is an irreversible loss that
+                the body has to learn to cope with (Fuchs et al. p.1). However, even after the amputation, the brain
+                does not simply forget the lost part, it holds onto memories of it, which results in what is known as
+                phantom sensations or pain (Fuchs et al. p.5). Amputation, in this context, is not only physical but is
+                also psychological, as the body and mind are left to cope with the loss of something that used to be a
+                part of one’s body and that one used to be able to function with.
+            </p>
+
+            <h2 class="parallelquote" onclick="toggleText(this)">In GAZA</h2>
+
+            <p class="hidden-text">
+                The strip of Gaza has gone through and is still experiencing multiple amputations. The land together
+                with culture, history, community and freedom have undergone amputation because of the occupation,
+                systemic violence and geopolitical restrictions throughout the years (Shalhoub, 2024). The forced
+                displacement from their homeland creates a sensory experience of disconnection from their
+                familiarities.The people of Gaza, as amputees do, experience the similar pain coming from the loss in a
+                point of view of where they have lost a sense of home, culture and their freedoms.
+            </p>
+            <p class="hidden-text">
+                In “Letter from Gaza”, 1956, Kanafani refers to Nadia's amputated leg, a symbol of the
+                separation which extends beyond physical body loss to impact the essence of identity and existence
+                of Palestinians (Berger, 2008). The traumatic experiences within Gaza, and the people of Gaza refusing
+                to accept
+                the loss from what was taken, drives the ongoing seek of reclamation, much like the amputee who
+                still feels the pain of a missing limb.
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="sticky-video-container02">
+        <div class="image-container">
+            <a href="https://www.youtube.com/watch?v=-ThCEzFWLOQ" target="_blank">
+                <img class="bergervideo" src="images/BergerVideo.png" alt="Click to start the video">
+            </a>
+            <p class="bergervideocaption">Click to start "Letter From Gaza" by Ghassan Kanafani, read by John Berger,
+                2008</p>
+        </div>
+    </div>
+
+    <div class="invisiblespacing">
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+    </div>
+
+    <div class="invisiblespacing02">
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+    </div>
+
+
+
+
+    <div class="EssayBodyContents">
+        <p>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <div class="quote-container2" onclick="toggleText(this)">
+            <div id="keyword4" class="section">
+                <h2 class="mainquote" onclick="toggleText(this)">3. Phantom</h2>
+            </div>
+            <h3>Digging is a methodology, where is seen as a craft that has to be mastered, where the methods of
+                tunnel digging are based on years of craftsmanship and ingenuity.
+            </h3>
+            <h2 class="parallelquote" onclick="toggleText(this)">In PLP</h2>
+            <p class="hidden-text2">
+                The term “phantom” in PLP is the missing limb, the part of the body that is no longer there physically
+                but is still felt by the person (Fuchs et al. p.1-2). It stands for the brain’s capacity to keep the
+                memories of the lost part in the body map even when the part is no longer physically present (Fuchs et
+                al. p.1-2). The phantom limb is not just a neurologic response, but it is a manifestation of the brain’s
+                refusal to accept the absence of what used to be. The experience of the phantom limb is an embodied
+                memory of the former completeness of one’s body, which continues to haunt the individual even when the
+                body is physically whole.
+            </p>
+            <h2 class="parallelquote" onclick="toggleText(this)">In GAZA</h2>
+            <p class="hidden-text2">
+                Gaza itself is a concept of “phantom”. The land has unwillingly lost both its ground and cultural
+                identity and people's sense of self. The people of Gaza experience a phantom connection to their ‘home’
+                under the circumstance of their land remaining under occupation while their houses get demolished and
+                their freedom remains restricted (Shalhoub, 2024).
+            </p>
+            <p class="hidden-text2">
+                The “phantom” in this context describes the enduring emotional bond between people and their land
+                despite physical separation. The loss manifests through missed possibilities combined with destroyed
+                futures and interrupted relationships because of separations within family and deaths (Shalhoub, 2024).
+                This “phantom” enacts more than a lost body part since it embodies the sharing memory of people who
+                maintain their connection to their lost sense of home.
+            </p>
+
+        </div>
 
 
     </div>
 
 
-    <p class="upper-bodyparagraph">
-        The phenomenon of <b>phantom limb pain</b>, the lingering sensation of an absent limb, is not merely a
-        neurological
-        response to physical amputation but also a deeply <b>embodied trauma</b>, where the body and mind retain the
-        memory of
-        what was once there.
-    </p>
-
-    <p class="following-bodyparagraph">
-        This pain could extends beyond the individual, metaphorically resonating within entire communities that have
-        experienced forced
-        separations from their familiarities. Similarly, <b>the act of digging</b> tunnels in Gaza emerges as a
-        collective response to a different kind of amputation within land, history, culture, and
-        freedom.
-    </p>
-
-
-
-
-    <div class="quote-container2" onclick="toggleText(this)">
-        <h2 class="mainquote">The Act of Digging</h2>
-        <h3>Digging is a methodology, where is seen as a craft that has to be mastered, where the methods of
-            tunnel digging are based on years of craftsmanship and ingenuity.
-        </h3>
-        <p class="hidden-text">
-            Clay and soil layers that were dug and making subtracted spaces underground in the
-            process of digging the tunnels around the Gaza could be considered as a sense of a material for craft,
-            when it comes to a context of craftsmanship, a craft such as a pottery, which is a sense of vessel with
-            hollow spaces left inside.
-        </p>
-        <p class="hidden-text">Looking into this linkage between two different scales,
-        </p>
-
-        <p class="hidden-text">[Micro scale- in the context of craftsmanship:
-            vessel as an object, such as pottery made by clay and soil],to the
-        </p>
-        <p class="hidden-text">[Macro scale- in Spatial way, Tunnel
-            system itself which is seen as the underground vessel that is containing various communities and ecosystems]
-        </p>
-        <h2>|</h2>
-        <h2>|</h2>
-        <h2>|</h2>
+    <div class="sticky-video-container03">
+        <div class="image-container">
+            <a href="https://www.youtube.com/watch?v=cw3Y-6GqytM" target="_blank">
+                <img class="shalhoubvideo" src="images/ShalhoubVideo.png" alt="Click to start the video">
+            </a>
+            <p class="shalhoubvideocaption">Every Power Has A Counter-Power. Resistance.</p>
+        </div>
     </div>
 
 
 
-    <p class="upper-bodyparagraph">
-        I'm interpreting the act of ‘digging the tunnel’ as a desire to reclaim what was once there, what was lost.
-    </p>
+    <div class="invisiblespacing">
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+    </div>
 
-    <p class="middle-bodyparagraph">
-        Amputated land and history. Amputated freedom to travel or transfer goods without going through the checkpoints.
-        Amputated cultures and resources. Amputated connection with family and home. Amputated community. Which are
-        embodied to one’s body.
-    </p>
 
-    <p class="middle-bodyparagraph">
-        Act of digging tunnels underground in Gaza is not just a physical activity but it is seeking out their embodied
-        memories within their lands, cultures and communities. Feeling a phantom limb pain from what they used to have,
-        such as freedom and safety.
-    </p>
-    <p class="following-bodyparagraph">
-        Filling in new memories and intentions into the hollow -subtracted negative spaces that were intentionally dug
-        by a community who are seeking for their amputated embodied memories they used to naturally have.
-    </p>
+    <div class="clicknote02">
+        <p class="click">
+            _ _ ___ _ __ ___ _ __✳︎_Click__Floating__Words_to__Open_and__Hold!___ _ __ _ ____</p>
+        <p class="clickAgain">
+            _ __✳︎_If Hidden Text does not open,__ ___ _ _ __ Please Scroll Down A Bit - _ __</p>
+        <p class="clickAgain">
+            __ _ _- Scroll Up -__ Bring Your Cursor Slowly,_ ___ _ and Click Again!__ _ _ __</p>
+    </div>
+
+
+
+
+    <div class="EssayBodyContents">
+        <p>
+        <div class="quote-container1" onclick="toggleText(this)">
+            <div id="keyword1" class="section">
+                <h2 class="mainquote" onclick="toggleText(this)">
+                    4. The Act of Digging
+                </h2>
+            </div>
+            <h3>
+                <i>"Every Power has its Counter-Power." (Shalhoub, 2024)</i>
+            </h3>
+
+            <h2 class="parallelquote" onclick="toggleText(this)">In PLP</h2>
+
+            <p class="hidden-text">
+                In the context of PLP, the word 'digging' is an analogy for the continuous process of looking for
+                something which has been missing. In this case, the search is for the lost limb. The individual with PLP
+                is always ‘digging’ into their own sensory memories, searching for the limb that is no longer there.
+                This search is a persistent, embodied action of the mind attempting to come to terms with the loss, and
+                reconnect with the missing part of the body. In this case, the act of digging is, therefore, physical
+                and mental, and is rooted in the trauma of the loss and the brain’s ongoing attempt to find the missing
+                piece.
+            </p>
+
+            <h2 class="parallelquote" onclick="toggleText(this)">In GAZA</h2>
+
+            <p class="hidden-text">
+                Digging is symbolic of the physical and psychological trauma inflicted on the people of Gaza. The act of
+                digging in Gaza is also both an action of a metaphorical and literal search, investigation
+                and reclaiming. It is not only about digging tunnels for survival or for better transportation routes,
+                but about a profound, embodied search for lost land, culture and freedom. The digging becomes a bodily
+                action, in which the community is actively fighting against the systemic violences that wanted to erase
+                their existence.
+            </p>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="EssayBodyContents">
+        <p class="ParallelParagraph14px">
+            Nadera Shalhoub, in "There is So Much Love in Palestine", describes how the Palestinians fight against
+            the occupation and violence. Mentioning “every power has its counterpower”, she explains <b>how
+                Palestinians</b> escaped from the prison, <b>using the simplest tool– spoons, digging their own way out
+                to the
+                liberation</b> (Shalhoub, 2024).
+        </p>
+        <p class="ParallelParagraph14px">
+            It is like using <i>an amputated arm</i> <i>-The skin of the stub that is relatively much fragile compared
+                to the
+                whole arm, the difference in skill and strength that comes from perfection-</i> to dig a hole, digging a
+            wall
+            and digging a tunnel with their bare hands and fingers as a rake, spoon as a bulldozer instead of a solid
+            metal machineries.
+        </p>
+        <p class="ParallelParagraph14px">
+            This act of digging is a form of agency, a bodily, outwarding activity of resistance. Each
+            tunnel dug, much like the body's search for a phantom limb, is an act of survival, memory, and the desire to
+            reconnect with what was lost - just with their bare hands - fingertips with dirt, incomparably stronger than
+            any other mechanical power. <b>Resistance.</b>
+        </p>
+    </div>
+
+
+
+    <div class="EssayBodyContents">
+        <p>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <div class="quote-container2" onclick="toggleText(this)">
+            <div id="keyword5" class="section">
+                <h2 class="mainquote" onclick="toggleText(this)">5. Prosthetics</h2>
+            </div>
+            <h3>Digging is a methodology, where is seen as a craft that has to be mastered, where the methods of
+                tunnel digging are based on years of craftsmanship and ingenuity.
+            </h3>
+            <h2 class="parallelquote" onclick="toggleText(this)">In PLP</h2>
+            <p class="hidden-text2">
+                The prosthetic in PLP means an artificial substitute or addition for the missing limb. Prosthetics in
+                any form from mechanical limbs to other types of aids help the body function again or to replace missing
+                body parts after amputation. A prosthetic might never provide a complete substitute for the original
+                body part since it represents a mechanical compromise that lacks full functionality. However, the
+                prosthetic functions as a physical manifestation of the body's continuous attempt to accept loss through
+                integration into a modified personal identity.
+            </p>
+            <h2 class="parallelquote" onclick="toggleText(this)">In GAZA</h2>
+            <p class="hidden-text2">
+                In Gaza, the prosthetic also takes on a metaphorical role. Imagining the process of reconstructing
+                buildings from the rubble to new spaces, mirrors the way a prosthetic works to replace missing body
+                parts. This representation symbolises the community's desire – “a digging” – to rebuild what has been
+                destroyed while working toward restoring functionality to a society that has lost its connection to its
+                heritage and history as well.
+            </p>
+            <p class="hidden-text2">
+                The rubble of demolished homes serve as the material that the people of
+                Gaza use to reconstruct their sense of home, identity, and community. Rebuilding demands a relationship
+                between materials (rubble, soil, stone) and space similar to prosthetics which need precise mechanical
+                interfaces to connect with the body thus healing the damaged landscape.
+            </p>
+        </div>
+
+
+    </div>
+
+    <div class="EssayBodyContents">
+        <p>
+            In both PLP and Gaza, the concepts of embodied trauma, amputation, phantom sensations, prosthetics, and
+            digging are important terms for the ongoing struggle to reclaim what has been lost. Whether through the
+            body’s passive remembrance of a missing limb or the community’s active resistance through the act of
+            digging, both experiences reveal the counter-power and resilience of the human spirit in the face of trauma
+            and loss. These key terms allow to see the ways in which memory, loss, and the desire for reclamation play
+            out in the physical body and the socio-political landscape of Gaza.
+        </p>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+    </div>
+
+
 
     <div class="image-container">
         <img class="BrainTunnel" src="images/BrainTunnel.png" alt="Parallel Drawing">
-        <p class="image-caption">'Imaginative Parallel Drawing of Nerve System Inside the Brain and Tunnel System Underground of Gaza'</p>
+        <p class="image-caption">'Imaginative Parallel Drawing of Nerve System Inside the Brain and Tunnel System
+            Underground of Gaza'</p>
     </div>
-    
-    
-    
 
 
-    <div class="quote-container3" onclick="toggleText(this)">
-        <h2 class="mainquote"><i>"A Prosthesis."</i></h2>
-        <h3><i>"Halfway down her shinbone, a brownish stub protrudes, smooth and round as the end of a baguette-or what
+    <div class="invisiblespacing03">
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+    </div>
+
+
+
+
+    <div class="EssayBodyContents">
+        <p>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+
+        <h1>Chapter 4 [Foot] : The Prosthetics of Rebuilding and Reclaiming</h1>
+        <p>
+            In both the context of Phantom Limb Pain(PLP) and Gaza, prosthetics functions as a vital tool that replaces
+            the
+            lost body part but also stands as a symbol of the process of reconstructing and re-defining oneself.
+        </p>
+        <div class="quote-container3" onclick="toggleText(this)">
+            <p>
+            <h2 class="mainquote" onclick="toggleText(this)"><i>"A Prosthesis."</i></h2>
+        </div>
+        <h3><i>"Halfway down her shinbone, a brownish stub protrudes, smooth and round as the end of a baguette-or
+                what
                 it
                 is, an amputated leg.</i>
             "</h3>
-        <p class="hidden-text">
+        <p class="EssayBodyhidden-text">
             <i>"Throughout the pedicure, the woman sways her head from side to side, eyes half-closed.
                 She moans with relief when you massage her one calf.</i>
         </p>
-        <p class="hidden-text">
+        <p class="EssayBodyhidden-text">
             <i>When you finish, turning to me for the towel, she leans over, gestures toward her right leg, the nub
                 hovering above the water, dry this whole time.</i>
         </p>
-        <p class="hidden-text">
+        <p class="EssayBodyhidden-text">
             <i>She says, "Would you mind," and coughs into her arm.
                 "This one also. If it's not too much." She pauses, stares out the window, then down at her lap.</i>
         </p>
-        <p class="hidden-text">
-            <i>Again, you say nothing-but turn, almost imperceptibly, to her right leg, run a measured caress along the
+        <p class="EssayBodyhidden-text">
+            <i>Again, you say nothing-but turn, almost imperceptibly, to her right leg, run a measured caress along
+                the
                 nub's length, </i>
         </p>
-        <p class="hidden-text">
+        <p class="EssayBodyhidden-text">
             <i>before cradling a handful of warm water over the tip, the thin streams crisscrossing the
                 leathered skin. Water droplets.</i>
         </p>
-        <p class="hidden-text">
+        <p class="EssayBodyhidden-text">
             <i>When you're almost done rinsing the soap off, she asks you, gently, almost
                 pleading, to go lower. "If it's the same price anyway," she says.</i>
         </p>
-        <p class="hidden-text">
+        <p class="EssayBodyhidden-text">
             <i><b>"I can still feel it down there. It's
                     silly, but I can. I can.""</b></i>
             <br> (Vuong, 2019, p. 81-82)
@@ -206,44 +747,186 @@
 
     </div>
 
-    <p class="upper-bodyparagraph">
-        The experience of <b>phantom limb pain</b> is also an act of endless searching: a deep, unconscious desire to
-        reconnect
-        with the amputated part of the body, as if it were still there.
-    </p>
-
-    <p class="middle-bodyparagraph">
-        This mirrors <b>the act of digging</b>, where the bodily act itself embodies an intense desire to find something
-        lost.
-    </p>
-
-    <p class="middle-bodyparagraph">
-        Digging is more than a physical act, it could also be a metaphor for searching, or even investigating,
-        an expression that
-        drives individuals and communities to reach deep into the ground, memory, or self in pursuit of what has been
-        missing.
-    </p>
-    <p class="following-bodyparagraph">
-        Whether felt in the body or enacted in the landscape, both phenomena reveal an instinctive resistance to loss—a
-        refusal to accept absence as final.</p>
-
-
-    <p class="citation1">
-        Fuchs, X., Flor, H. and Bekrater-Bodmann, R. (2018). Psychological Factors Associated with Phantom
-        Limb Pain: A Review of Recent Findings. Pain Research and Management, 2018(5080123), pp.1–12.
-        doi:https://doi.org/10.1155/2018/5080123.
-    </p>
-
-    <p class="citation2">
-        Vuong, O. (2019). On Earth We’re Briefly Gorgeous By Ocean Vuong :
-        Ocean Vuong : Free Download, Borrow, and Streaming : Internet Archive. [online] Internet Archive. Available at:
-        https://archive.org/details/on-earth-were-briefly-gorgeous-by-ocean-vuong.org/page/n81/mode/2up [Accessed 12
-        Mar. 2025].
-    </p>
+    </div>
 
 
 
-    <script src="script.js" defer></script>
+
+
+
+
+
+    <p class="click">
+        _ _ ___ _ __ ___ _ __✳︎_Click__Floating__Words_to__Open_and__Hold!___ _ __ _ ____</p>
+    <p class="clickAgain">
+        _ __✳︎_If Hidden Text does not open,__ ___ _ _ __ Please Scroll Down A Bit - _ __</p>
+    <p class="clickAgain">
+        __ _ _- Scroll Up -__ Bring Your Cursor Slowly,_ ___ _ and Click Again!__ _ _ __</p>
+
+    <div class="EssayBodyHidden" onclick="toggleText(this)">
+        <h2 class="mainquote" onclick="toggleText(this)">Literal Prosthetics.</h2>
+
+        <p class="EssayBodyhidden-text">
+            In the case of PLP, prosthetics are used to replace or supplement the amputated limb. Amputation within a
+            body part requires adaptation of one’s body and prosthetics is being a tool that helps in this process of
+            adaptation for an amputee. The prosthetics enable the body to operate again although it is still not
+            perfectly recreating the missing limb or biologically identical to the missing part, it acts as a mechanical
+            and functional extension of the body and enables the amputee to do things they were capable of before the
+            amputation.
+        </p>
+        <p class="EssayBodyhidden-text">
+            This replacement functions as an interface between the flesh of the body itself that is still
+            feeling the familiar, embodied memories of the missing limb and the unfamiliar, mechanically built
+            artificial part.
+        </p>
+    </div>
+
+
+    <div class="EssayBodyHidden" onclick="toggleText(this)">
+        <h2 class="mainquote" onclick="toggleText(this)">Prosthetics in GAZA?</h2>
+
+        <p class="EssayBodyhidden-text">
+            In Gaza, the concept of prosthetics is not limited to the physical context. Like the prosthetics being used
+            to replace a missing body part, the rebuilding of the structures, the digging of the tunnels, and the
+            reclaiming of Palestine can be regarded as ‘prosthetics’ for the amputated land, culture, and community.
+            Gaza has been deprived of its land, its people have been displaced, and its culture has been undermined.
+        </p>
+        <p class="EssayBodyhidden-text">
+            In response to these losses, the reconstruction and the digging of tunnels are a way to heal the wounds
+            inflicted by systemic forces, to create spaces in which identity, resistance and cultural memory can be kept
+            and strengthened. These “prosthetics” are not only physical structures but also acts of cultural resistance
+            and re-connection. Through this rebuilding, Gaza tries to return to its ‘home’ where familiarities and
+            histories remain, showing the counterpower against the erasure of its identity.
+        </p>
+
+    </div>
+
+    <div class="EssayBodyContents">
+        <h2>Crafting of Prosthetics : Bodily Relationship</h2>
+        <p>A prosthetic, whether it is a simple mechanical tool or a sophisticated technological device, acts as an
+            interface between two contrasting materialities, the limb with scar, and the artificially built body part.
+            The way of the prosthetic is crafted is– first building an internal base structure with titanium, aluminium
+            or stainless steel– making an interfaces using thermoplastic, acrylics, silicone and polyurethane for the
+            part meeting with body– inserting microprocessor or sensors for joint system– and finally covering up the
+            external, using foam, silicone skin for appearance and applying gel liner to give a comfortness and
+            flexibility.
+        </p>
+    </div>
+
+    <img class="FleshandMetal" src="images/fleshandmetal.png" alt="Watercolor Effect Image">
+
+    <div class="EssayBodyContents">
+        <p>
+            Looking into the process of how it is crafted, it is able to find a paralleling relationship with
+            architectural construction starting from an internal structure to the external details, also the materials
+            used for prosthetics are also commonly being used in constructing a building. Prosthetic is not just a
+            simple craft, however it is a process of reconstructing one’s body, configuring these materials to work
+            together to form a body part that not only substitutes for the missing limb, but also enables the amputee to
+            feel whole and continuous again.
+        <p>
+
+        </p>
+    </div>
+
+    <div class="EssayBodyContents">
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2>Crafting of Prosthetics : Spatial Relationship in the context of Re-Building GAZA</h2>
+        <p>In Gaza, the concept of prosthetics is not limited to the physical context. Like the prosthetics being used
+            to replace a missing body part, the rebuilding of the structures, the digging of the tunnels, and the
+            reclaiming of Palestine can be regarded as ‘prosthetics’ for the amputated land, culture, and community.
+            Gaza has been deprived of its land, its people have been displaced, and its culture has been undermined.
+        </p>
+        <p>In response to these losses, the reconstruction and the digging of tunnels are a way to heal the wounds
+            inflicted by systemic forces, to create spaces in which identity, resistance and cultural memory can be kept
+            and strengthened. These “prosthetics” are not only physical structures but also acts of cultural resistance
+            and re-connection. Through this rebuilding, Gaza tries to return to its ‘home’ where familiarities and
+            histories remain, showing the counterpower against the erasure of its identity.
+        </p>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="EssayBodyContents">
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <p>
+        <h1>Chapter 5 [Ground] : To Conclude and To Continue</h1>
+        <h2>Questioning the Temporality of Spatial and Bodily Sensations</h2>
+        PLP and the act of digging demonstrate an ongoing conflict between temporal experiences and enduring structures
+        that reflect the struggle to retrieve what has been lost. The body in PLP maintains a lasting memory of pain
+        which continues to exist even after amputation thus extending the experience of loss. The feeling remains across
+        time and space because it exists within both mental awareness and physical flesh. Through the process of digging
+        people strive to recover both lost physical territories and historical memories as the present moment meets
+        their desire to restore what has been permanently transformed.
+        </p>
+        <p>
+            The spatial sensations in Gaza experience temporal changes because of the continuous process of destruction
+            followed by reconstruction. The process of digging functions as a dialogue between the empty spaces after
+            countless destructions and the physical exploration of redefined extra spaces dug underground. It contains
+            dual purposes while it builds literal underground passages but also simultaneously fills up alternative
+            stories within subtracted spaces.
+        </p>
+        <p>
+            The phantom limb pain and the act of digging both require continuous interaction within the relationship
+            between what exists and what does not exist, and between what has been lost and what has been resisted to be
+            reclaimed. The temporal nature of spatial and bodily sensations demonstrates that all losses remain present
+            in certain forms. The denial or refusal of accepting lost things leads to keep ongoing experiences of
+            resistance happening within both physical body parts and the context of the land, home and communities.
+
+        </p>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+        <h2 class="spacing">|</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p class="citation1">
+            Fuchs, X., Flor, H. and Bekrater-Bodmann, R. (2018). Psychological Factors Associated with Phantom
+            Limb Pain: A Review of Recent Findings. Pain Research and Management, 2018(5080123), pp.1–12.
+            doi:https://doi.org/10.1155/2018/5080123.
+        </p>
+
+        <p class="citation2">
+            Vuong, O. (2019). On Earth We’re Briefly Gorgeous By Ocean Vuong :
+            Ocean Vuong : Free Download, Borrow, and Streaming : Internet Archive. [online] Internet Archive. Available
+            at:
+            https://archive.org/details/on-earth-were-briefly-gorgeous-by-ocean-vuong.org/page/n81/mode/2up [Accessed 12
+            Mar. 2025].
+        </p>
+
+
+
+        <script src="script.js" defer></script>
 
 </body>
 

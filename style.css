@@ -5,57 +5,386 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    /* 페이지 시작 부분에서 시작 */
     min-height: 100vh;
     width: 100vw;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0px;
-    position: relative;
+    margin: 0px;
+    padding: 0;
     overflow-x: hidden;
 }
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* 마우스 이벤트를 받지 않도록 설정 */
+}
 
-.introduction{
-    margin-top: 300px;
-    margin-bottom: 1000px;
+#cellCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* 높이를 화면 크기에 맞춤 */
+    pointer-events: none;
+    /* canvas가 다른 요소들을 가리지 않도록 설정 */
+    z-index: 1;
+    /* 다른 콘텐츠들 아래로 배치 */
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#stitchCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* 높이를 화면 크기에 맞춤 */
+    pointer-events: none;
+    /* canvas가 다른 요소들을 가리지 않도록 설정 */
+    z-index: 0;
+    /* 다른 콘텐츠들 아래로 배치 */
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.name {
+    align-items: right;
+    text-align: right;
+    width: 100%;
+    font-size: 1vw;
+}
+
+.clicknote {
+    align-items: right;
+    text-align: right;
+    width: 100%;
+    font-size: 0.7vw;
+    color: rgb(119, 119, 119);
+    margin-top: 50px;
+    opacity: 70%;
+}
+
+.clicknote02 {
+    align-items: right;
+    text-align: right;
+    width: 100%;
+    font-size: 0.7vw;
+    color: rgb(119, 119, 119);
+    margin-top: 50px;
+    opacity: 70%;
+}
+
+.click {
+    align-items: right;
+    text-align: right;
+    width: 100%;
+    font-size: 0.7vw;
+    color: rgb(119, 119, 119);
+    margin-top: 50px;
+    opacity: 70%;
+}
+
+.clickAgain {
+    align-items: right;
+    text-align: right;
+    width: 100%;
+    font-size: 0.7vw;
+    color: rgb(119, 119, 119);
+    margin-top: 0px;
+    opacity: 70%;
+}
+
+.click_icon {
+    font-size: 2vw;
+    color: rgb(127, 127, 127);
+    align-items: right;
+    text-align: right;
+    width: 50%;
+}
+
+.spacing {
+    opacity: 0%;
+    text-align: center;
+}
+
+/* 키워드 섹션 */
+#keywords-section {
+    position: fixed;
+    top: 20%;
+    left: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#keywords-section .keyword a {
+    text-decoration: none; /* 기본 링크 스타일 제거 */
+    color: inherit; /* 텍스트 색상 유지를 위해 */
+    font-family: "Shizuru", system-ui;
+    font-size: 1vw;
+    padding: 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    animation: watercolorEffect04 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+}
+
+/* 클릭 시 링크 색상 변경 */
+#keywords-section .keyword a:active {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+
+
+
+/* 키워드 스타일 */
+.keyword01 {
+    font-family: "Shizuru", system-ui;
+    font-size: 1vw;
+    padding: 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 70%;
+    display: flex; /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
+    flex-wrap: wrap;
+    animation: watercolorEffect01 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+}
+
+/* 글자 수채화 물감처럼 퍼지는 효과 */
+@keyframes watercolorEffect01 {
+    0% {
+        opacity: 0.7; /* 처음에 투명 */
+        filter: blur(0.6px); /* 흐림 효과 */
+        transform: scale(0.8); /* 작은 크기로 시작 */
+    }
+    50% {
+        opacity: 0.3; /* 중간에는 보임 */
+        filter: blur(0.2px); /* 흐림 효과 줄어듬 */
+        transform: scale(1); /* 정상 크기로 */
+    }
+    100% {
+        opacity: 0.9; /* 다시 투명하게 */
+        filter: blur(1px); /* 흐림 효과 다시 증가 */
+        transform: scale(0.8); /* 크기가 커짐 */
+    }
+}
+
+.keyword02 {
+    font-family: "Shizuru", system-ui;
+    font-size: 1vw;
+    padding: 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 70%;
+    display: flex; /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
+    flex-wrap: wrap;
+    animation: watercolorEffect02 5s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+}
+/* 글자 수채화 물감처럼 퍼지는 효과 */
+@keyframes watercolorEffect02 {
+    0% {
+        opacity: 0.8; /* 처음에 투명 */
+        filter: blur(1px); /* 흐림 효과 */
+        transform: scale(1); /* 작은 크기로 시작 */
+    }
+    50% {
+        opacity: 0.3; /* 중간에는 보임 */
+        filter: blur(0.5px); /* 흐림 효과 줄어듬 */
+        transform: scale(0.8); /* 정상 크기로 */
+    }
+    100% {
+        opacity: 0.6; /* 다시 투명하게 */
+        filter: blur(0.2px); /* 흐림 효과 다시 증가 */
+        transform: scale(1); /* 크기가 커짐 */
+    }
+}
+
+
+.keyword03 {
+    font-family: "Shizuru", system-ui;
+    font-size: 1vw;
+    padding: 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 70%;
+    display: flex; /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
+    flex-wrap: wrap;
+    animation: watercolorEffect03 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+}
+/* 글자 수채화 물감처럼 퍼지는 효과 */
+@keyframes watercolorEffect03 {
+    0% {
+        opacity: 0.8; /* 처음에 투명 */
+        filter: blur(1px); /* 흐림 효과 */
+        transform: scale(0.9); /* 작은 크기로 시작 */
+    }
+    50% {
+        opacity: 0.5; /* 중간에는 보임 */
+        filter: blur(0.8px); /* 흐림 효과 줄어듬 */
+        transform: scale(1); /* 정상 크기로 */
+    }
+    100% {
+        opacity: 0.9; /* 다시 투명하게 */
+        filter: blur(0.5px); /* 흐림 효과 다시 증가 */
+        transform: scale(0.9); /* 크기가 커짐 */
+    }
+}
+
+
+
+/* 미세한 색 변화나 강조 */
+.keyword:hover {
+    color: #FF6347; /* Hover 시 텍스트 색상 변경 */
+}
+
+.dictionary {
+    font-family: "Shizuru", system-ui;
+    font-size: 1.2vw;
+    opacity: 80%;
+    padding: 10px;
+    padding-left: 0px;
+    display: flex; /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
+    flex-wrap: wrap;
+    animation: watercolorEffect04 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+}
+
+.clickDictionary {
+    font-family: "Shizuru", system-ui;
+    align-items: right;
+    text-align: left;
+    font-size: 0.6vw;
+    color: rgb(22, 22, 22);
+    opacity: 100%;
+    padding-top: 30px;
+    animation: watercolorEffect04 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+}
+
+/* 글자 수채화 물감처럼 퍼지는 효과 */
+@keyframes watercolorEffect04 {
+    0% {
+        opacity: 1; /* 처음에 투명 */
+        filter: blur(1px); /* 흐림 효과 */
+        transform: scale(1); /* 작은 크기로 시작 */
+    }
+    50% {
+        opacity: 1; /* 중간에는 보임 */
+        filter: blur(0.8px); /* 흐림 효과 줄어듬 */
+        transform: scale(1); /* 정상 크기로 */
+    }
+    100% {
+        opacity: 1; /* 다시 투명하게 */
+        filter: blur(0.5px); /* 흐림 효과 다시 증가 */
+        transform: scale(1); /* 크기가 커짐 */
+    }
+}
+
+
+
+
+
+
+.introduction {
+    margin-top: 10px;
+    margin-bottom: 500px;
     width: 60%;
 }
 
-.bodyparagraph{
-    margin-top: 200px;
+.EssayBodyContents {
+    margin: 0 auto;
+    position: relative;
+    width: 60%;
+}
+
+.Paragraph14px {
+    font-size: 14px;
+}
+
+.ParallelParagraph14px {
+    width: 75%;
+    font-size: 14px;
+    text-align: left;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.bodyparagraph {
+    margin-top: 0px;
     margin-bottom: 300px;
     width: 70%;
 }
-.upper-bodyparagraph{
+
+.upper-bodyparagraph {
     margin-top: 200px;
-    width: 60%;
+    text-align: left;
 }
-.middle-bodyparagraph{
-    width: 60%;
+
+.middle-bodyparagraph {
+    width: 100%;
+    text-align: left;
 }
-.following-bodyparagraph{
+
+.following-bodyparagraph {
     margin-bottom: 300px;
-    width: 60%;
+    width: 100%;
+    text-align: left;
 }
-.citation1{
+
+.citation1 {
     font-family: "Lekton", monospace;
     font-weight: 100;
     font-size: x-small;
     font-style: normal;
-    width: 60%;
     margin-top: 1000px;
 }
-.citation2{
+
+.citation2 {
     font-family: "Lekton", monospace;
     font-weight: 100;
     font-size: x-small;
     font-style: normal;
-    width: 60%;
 }
+
+
+h1 {
+    font-family: "Londrina Shadow", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
 h2 {
     font-family: "Londrina Shadow", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.mainquote {
+    font-family: "Shizuru", system-ui;
+    padding: 20px;
+    opacity: 80%;
+}
+
+.parallelDescription {
+    font-family: "Shizuru", system-ui;
+    padding: 60px;
+}
+
+.parallelquote {
+    font-family: "Shizuru", system-ui;
+    font-size: 16px;
 }
 
 h3 {
@@ -72,18 +401,27 @@ h3 {
     position: flex;
     top: 5px;
     left: 5px;
-    font-size: 5vw;
+    font-size: 100px;
     font-weight: bold;
     color: #333;
     margin-bottom: 100px;
     stroke: black;
 }
 
+.TitleQuote {
+    font-family: "Shizuru", system-ui;
+    font-size: 20px;
+    color: #626262;
+    text-align: right;
+    opacity: 70%;
+    animation: watercolorEffect04 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+    margin-bottom: 30px;
+}
+
 .quotes-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
     max-width: 1200px;
     margin-bottom: 100px;
 }
@@ -92,15 +430,14 @@ h3 {
     position: relative;
     align-items: right;
     text-align: right;
-    width: 80%;
     cursor: pointer;
     animation: floatAnimation 2s infinite ease-in-out alternate;
+    margin-top: 30px;
 }
 
 .quote-container1:nth-child(1) {
     position: absolute;
     animation-delay: 0s;
-    right: 15vw;
     padding: 100;
 }
 
@@ -108,8 +445,7 @@ h3 {
     position: relative;
     align-items: left;
     text-align: left;
-    width: 80%;
-    margin-top: 200px;
+    margin-top: 30px;
     cursor: pointer;
     animation: floatAnimation 2s infinite ease-in-out alternate;
 }
@@ -120,20 +456,20 @@ h3 {
     margin: 100;
 }
 
-.quote-container3 {
+.EssayBodyHidden {
     position: relative;
-    align-items: right;
-    text-align: right;
-    width: 80%;
-    margin-top: 300px;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin-top: 0px;
+    margin-bottom: 10px;
     cursor: pointer;
     animation: floatAnimation 2s infinite ease-in-out alternate;
 }
 
-.quote-container1:nth-child(3) {
-    position: absolute;
+.EssayBodyHidden:nth-child(3) {
+    position: relative;
     animation-delay: 0s;
-    right: 15vw;
     padding: 100;
 }
 
@@ -149,7 +485,6 @@ h3 {
 
 .quote-container1 h2 {
     position: relative;
-    font-size: 3vw;
     font-weight: bold;
     color: #333;
     margin: 5px 0;
@@ -160,7 +495,6 @@ h3 {
 }
 
 .quote-container1 h3 {
-    font-size: 2vw;
     color: #333;
     margin: 10px 0;
     background: none;
@@ -172,11 +506,12 @@ h3 {
 .quote-container1:hover .hidden-text {
     max-height: 300px;
     opacity: 1;
+    align-items: right;
+    align-content: right;
 }
 
 .quote-container2 h2 {
     position: relative;
-    font-size: 3vw;
     font-weight: bold;
     color: #333;
     margin: 5px 0;
@@ -187,7 +522,6 @@ h3 {
 }
 
 .quote-container2 h3 {
-    font-size: 2vw;
     color: #333;
     margin: 10px 0;
     background: none;
@@ -196,14 +530,13 @@ h3 {
     box-shadow: none;
 }
 
-.quote-container2:hover .hidden-text {
+.quote-container2:hover .hidden-text2 {
     max-height: 300px;
     opacity: 1;
 }
 
-.quote-container3 h2 {
+.EssayBodyHidden h2 {
     position: relative;
-    font-size: 3vw;
     font-weight: bold;
     color: #333;
     margin: 5px 0;
@@ -213,18 +546,17 @@ h3 {
     box-shadow: none;
 }
 
-.quote-container3 h3 {
-    font-size: 2vw;
+.EssayBodyHidden h3 {
     color: #333;
     margin: 10px 0;
     background: none;
-    padding: 20px;
+    padding-bottom: 20px;
     border: none;
     box-shadow: none;
 }
 
-.quote-container3:hover .hidden-text {
-    max-height: 300px;
+.EssayBodyHidden:hover .EssayBodyhidden-text {
+    max-height: 500px;
     opacity: 1;
 }
 
@@ -233,60 +565,328 @@ h3 {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    font-size: 0.85vw;
-    color: #333;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    font-size: 14px;
+    color: #626262;
     margin-top: 5px;
+    text-align: left;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 20px;
+    border-right-style: dashed;
+    border-right-color: #626262;
+    width: 70%;
 }
 
-.quote-container1.active .hidden-text {
+.hidden-text.active {
+    max-height: 500px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.hidden-text2 {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    font-size: 14px;
+    color: #626262;
+    margin-top: 5px;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
+    padding: 20px;
+    border-left-style: dashed;
+    border-left-color: #626262;
+    width: 70%;
+}
+
+.hidden-text2.active {
+    max-height: 500px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.EssayBodyhidden-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out, max-height 0.2s ease-in-out;
+    font-size: 14px;
+    color: #626262;
+    margin-top: 50px;
+    width: 80%;
+    text-align: left;
+    padding: 20px;
+    border-left-style: dashed;
+    border-left-color: #626262;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.EssayBodyhidden-text.active {
+    max-height: 500px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.quote-container1.active .hidden-text,
+.quote-container2.active .hidden-text2,
+.EssayBodyHidden.active .EssayBodyhidden-text {
     max-height: 200px;
     opacity: 1;
 }
 
-.quote-container2.active .hidden-text {
-    max-height: 200px;
-    opacity: 1;
-}
 
-.quote-container3.active .hidden-text {
-    max-height: 200px;
-    opacity: 1;
-}
 
-#stitchCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: -1;
-}
+
 
 img {
-    opacity: 50%;
+    opacity: 0%;
     width: 100%;
 }
-.PhantomIMG{
+
+.Hero {
+    opacity: 50%;
+    margin-top: 0px;
+    padding-top: 0px;
+    animation: fadeIn 2s;
+}
+
+
+.PhantomIMG {
     max-width: 40%;
     opacity: 100%;
+    margin-right: auto;
+    margin-left: 0;
     animation: floatAnimation 2s infinite ease-in-out alternate;
 }
-.BrainTunnel{
+
+/* 이미지에 수채화 물감처럼 스며드는 애니메이션 */
+.SkinTexture01 {
+    max-width: 90%;
+    opacity: 0;
+    /* 처음에는 투명하게 시작 */
+    margin-right: 0;
+    /* 오른쪽 여백을 0으로 설정 */
+    margin-left: auto;
+    animation: watercolorEffect 8s infinite ease-in-out alternate;
+    /* 애니메이션 추가 */
+}
+
+/* 물감처럼 스며드는 효과 */
+@keyframes watercolorEffect {
+    0% {
+        opacity: 0;
+        /* 처음에는 완전히 투명 */
+        filter: blur(2px);
+        /* 흐림 효과 */
+    }
+
+    50% {
+        opacity: 0.65;
+        /* 중간에는 거의 보이게 */
+        filter: blur(0.5px);
+        /* 흐림 효과 없애기 */
+    }
+
+    100% {
+        opacity: 0;
+        /* 다시 투명하게 */
+        filter: blur(2px);
+        /* 다시 흐림 효과 */
+    }
+}
+
+/* 이미지에 수채화 물감처럼 스며드는 애니메이션 */
+
+
+
+.SkinTexture02 {
+    max-width: 60%;
+    opacity: 0;
+    /* 처음에는 투명하게 시작 */
+    margin-right: auto;
+    margin-left: 0;
+    animation: watercolorEffect 8s infinite ease-in-out alternate;
+    /* 애니메이션 추가 */
+}
+
+/* 물감처럼 스며드는 효과 */
+@keyframes watercolorEffect {
+    0% {
+        opacity: 0.2;
+        /* 처음에는 완전히 투명 */
+        filter: blur(2px);
+        /* 흐림 효과 */
+    }
+
+    50% {
+        opacity: 0.5;
+        /* 중간에는 거의 보이게 */
+        filter: blur(1px);
+        /* 흐림 효과 없애기 */
+    }
+
+    100% {
+        opacity: 0.1;
+        /* 다시 투명하게 */
+        filter: blur(2px);
+        /* 다시 흐림 효과 */
+    }
+}
+
+.BrainTunnel {
     max-width: 60%;
     opacity: 100%;
     animation: floatAnimation 2s infinite ease-in-out alternate;
 }
+
 .image-container {
-    text-align: center; /* Centers the image and caption */
-    margin: 20px 0; /* Adds spacing above and below */
+    text-align: center;
+    /* Centers the image and caption */
+    margin-top: 20px;
+    /* Adds spacing above and below */
 }
 
 .image-caption {
-    font-size: 0.8em; /* Makes the text smaller */
-    color: #555; /* Light gray color */
+    font-size: 0.8em;
+    /* Makes the text smaller */
+    color: #555;
+    /* Light gray color */
     margin-top: 30px;
     text-align: center;
-    font-style: italic; /* Optional: Makes the caption italic */
+    font-style: italic;
+    /* Optional: Makes the caption italic */
 }
+
+.shalhoubvideocaption {
+    font-size: 0.8vw;
+    /* Makes the text smaller */
+    color: #555;
+    /* Light gray color */
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: left;
+    font-style: italic;
+    /* Optional: Makes the caption italic */
+}
+
+.bergervideocaption {
+    font-size: 0.8vw;
+    /* Makes the text smaller */
+    color: #555;
+    /* Light gray color */
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: left;
+    font-style: italic;
+    /* Optional: Makes the caption italic */
+}
+
+.shalhoubvideo {
+    position: sticky;
+    top: 20px; /* 화면 상단에서 20px 떨어지게 */
+    left: 80%;  /* 화면의 60% 지점부터 오른쪽에 위치 */
+    width: 90%; /* 20% 공간에 sticky로 배치 */
+    z-index: 100;
+    opacity: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 이미지에 그림자 추가 */
+    transition: transform 1s ease;
+}
+
+.bergervideo {
+    position: sticky;
+    top: 20px; /* 화면 상단에서 20px 떨어지게 */
+    left: 80%;  /* 화면의 60% 지점부터 오른쪽에 위치 */
+    width: 90%; /* 20% 공간에 sticky로 배치 */
+    z-index: 100;
+    opacity: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 이미지에 그림자 추가 */
+    transition: transform 1s ease;
+}
+
+
+
+/* 오른쪽에 sticky로 떠있는 비디오 이미지 */
+.sticky-video-container01, .sticky-video-container03 {
+    position: sticky;
+    top: 20px; /* 화면 상단에서 20px 떨어지게 */
+    left: 99%;  /* 화면의 60% 지점부터 오른쪽에 위치 */
+    width: 20%; /* 20% 공간에 sticky로 배치 */
+    z-index: 100;
+    transition: transform 1s ease;
+}
+
+/* 오른쪽에 sticky로 떠있는 비디오 이미지 */
+.sticky-video-container02 {
+    position: sticky;
+    top: 20px; /* 화면 상단에서 20px 떨어지게 */
+    left: 99%;  /* 화면의 60% 지점부터 오른쪽에 위치 */
+    width: 20%; /* 20% 공간에 sticky로 배치 */
+    z-index: 100;
+    transition: transform 1s ease;
+}
+
+
+/* sticky 비디오 이미지 스타일 */
+.sticky-video {
+    width: 100%;  /* 20% 공간에 꽉 차게 */
+    border-radius: 8px; /* 약간의 테두리 반경 추가 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 이미지에 그림자 추가 */
+    transition: transform 1s ease;
+}
+
+/* 이미지 hover 시 약간 확대되는 효과 */
+.shalhoubvideo:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* 이미지에 수채화 물감처럼 스며드는 애니메이션 */
+.FleshandMetal {
+    max-width: 80%;
+    opacity: 0;
+    /* 처음에는 투명하게 시작 */
+    margin-right: 0;
+    /* 오른쪽 여백을 0으로 설정 */
+    margin-left: auto;
+    animation: watercolorEffect 8s infinite ease-in-out alternate;
+    /* 애니메이션 추가 */
+}
+
+/* 물감처럼 스며드는 효과 */
+@keyframes watercolorEffect {
+    0% {
+        opacity: 0.7;
+        /* 처음에는 완전히 투명 */
+        filter: blur(1px);
+        /* 흐림 효과 */
+    }
+
+    50% {
+        opacity: 0.95;
+        /* 중간에는 거의 보이게 */
+        filter: blur(0.2px);
+        /* 흐림 효과 없애기 */
+    }
+
+    100% {
+        opacity: 0.8;
+        /* 다시 투명하게 */
+        filter: blur(1px);
+        /* 다시 흐림 효과 */
+    }
+}
+
+/* 이미지에 수채화 물감처럼 스며드는 애니메이션 */
