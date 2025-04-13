@@ -133,6 +133,11 @@ animateKeywordsOnScroll();
 
 
 
+
+
+
+
+
 // 클릭 시 'active' 클래스를 추가하여 텍스트가 펼쳐지게 함
 document.querySelectorAll('.quote-container1, .quote-container2, .EssayBodyHidden').forEach((item) => {
     item.addEventListener('click', function () {
@@ -299,3 +304,41 @@ function animateCells() {
 // 세포 150개 생성
 createCells(150);
 animateCells();  // 세포 애니메이션 시작
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ========== 6. TEXT SCROLL EFFECT (스크롤에 따라 펼쳐지고 닫히는 효과) ==========
+const hiddenTextElements = document.querySelectorAll('.hidden-text, .hidden-text2, .EssayBodyhidden-text');
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        const hiddenText = entry.target;
+        if (entry.isIntersecting) {
+            hiddenText.classList.add('active');
+        } else {
+            hiddenText.classList.remove('active');
+        }
+    });
+}, options);
+
+hiddenTextElements.forEach(element => {
+    observer.observe(element);
+});
+
