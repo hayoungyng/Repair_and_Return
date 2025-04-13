@@ -347,10 +347,10 @@ canvas {
     font-weight: 100;
     font-size: x-small;
     font-style: normal;
-    margin-top: 1000px;
+    margin-top: 1300px;
 }
 
-.citation2 {
+.citation {
     font-family: "Lekton", monospace;
     font-weight: 100;
     font-size: x-small;
@@ -623,14 +623,20 @@ h3 {
     padding: 20px;
     border-left-style: dashed;
     border-left-color: #626262;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    word-wrap: break-word;
 }
+
+.EssayBodyhidden-text i, .EssayBodyhidden-text b {
+    display: inline; /* 기본적으로 inline 요소로 처리 */
+}
+
 
 .EssayBodyhidden-text.active {
     max-height: 500px;
@@ -674,7 +680,7 @@ img {
 
 .TypesPLP {
     width: 50%;
-    opacity: 90%;
+    opacity: 70%;
     margin-right: 0%;
     margin-left: 50%;
 }
@@ -687,7 +693,7 @@ img {
 
 .PLPBrain01 {
     width: 60%;
-    opacity: 70%;
+    opacity: 50%;
     filter: blur(0.3px);
 }
 
