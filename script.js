@@ -342,3 +342,26 @@ hiddenTextElements.forEach(element => {
     observer.observe(element);
 });
 
+
+
+
+
+// 화면 방향 변경을 감지하여 자동으로 새로고침
+window.addEventListener('orientationchange', function() {
+    // 화면이 가로 모드로 전환될 경우 새로 고침
+    if (window.orientation === 90 || window.orientation === -90) {
+        location.reload();  // 페이지 새로고침
+    }
+});
+
+// 웹 페이지 새로 고침 기능 (창 크기 변경 시)
+window.addEventListener('resize', function() {
+    location.reload(); // 창 크기 변경 시 페이지 새로고침
+});
+
+// ESC 키를 눌러 전체 화면에서 나갈 때 새로 고침
+window.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {  // ESC 키가 눌렸을 때
+        location.reload(); // 페이지 새로고침
+    }
+});

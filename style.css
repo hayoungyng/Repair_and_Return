@@ -15,11 +15,13 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+
 canvas {
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none; /* 마우스 이벤트를 받지 않도록 설정 */
+    pointer-events: none;
+    /* 마우스 이벤트를 받지 않도록 설정 */
 }
 
 #cellCanvas {
@@ -50,6 +52,23 @@ canvas {
     /* 다른 콘텐츠들 아래로 배치 */
     margin-top: 0px;
     padding-top: 0px;
+}
+
+#device-warning {
+    color: #721c24; 
+    padding: 10px; 
+    opacity: 50%;
+    text-align: center;  
+    margin-bottom: 20px;
+    width: 30%;
+    margin-right: 2%;
+    margin-left: 68%;
+}
+
+.warning {
+    align-items: center;
+    text-align: justify;
+    font-size: 8px;
 }
 
 .name {
@@ -126,17 +145,20 @@ canvas {
 }
 
 #keywords-section .keyword a {
-    text-decoration: none; /* 기본 링크 스타일 제거 */
-    color: inherit; /* 텍스트 색상 유지를 위해 */
+    text-decoration: none;
+    /* 기본 링크 스타일 제거 */
+    color: inherit;
+    /* 텍스트 색상 유지를 위해 */
     font-family: "Shizuru", system-ui;
-    font-size: 1vw;
+    font-size: 8px;
     padding: 0px;
     margin-bottom: 10px;
     cursor: pointer;
     opacity: 70%;
     display: flex;
     flex-wrap: wrap;
-    animation: watercolorEffect04 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+    animation: watercolorEffect04 6s infinite ease-in-out;
+    /* 수채화 물감 효과 추가 */
 }
 
 /* 클릭 시 링크 색상 변경 */
@@ -151,93 +173,134 @@ canvas {
 /* 키워드 스타일 */
 .keyword01 {
     font-family: "Shizuru", system-ui;
-    font-size: 1vw;
+    font-size: 8px;
     padding: 0px;
     margin-bottom: 10px;
     cursor: pointer;
     opacity: 70%;
-    display: flex; /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
+    display: flex;
+    /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
     flex-wrap: wrap;
-    animation: watercolorEffect01 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+    animation: watercolorEffect01 6s infinite ease-in-out;
+    /* 수채화 물감 효과 추가 */
 }
 
 /* 글자 수채화 물감처럼 퍼지는 효과 */
 @keyframes watercolorEffect01 {
     0% {
-        opacity: 0.7; /* 처음에 투명 */
-        filter: blur(0.6px); /* 흐림 효과 */
-        transform: scale(0.8); /* 작은 크기로 시작 */
+        opacity: 0.7;
+        /* 처음에 투명 */
+        filter: blur(0.3px);
+        /* 흐림 효과 */
+        transform: scale(0.8);
+        /* 작은 크기로 시작 */
     }
+
     50% {
-        opacity: 0.3; /* 중간에는 보임 */
-        filter: blur(0.2px); /* 흐림 효과 줄어듬 */
-        transform: scale(1); /* 정상 크기로 */
+        opacity: 0.6;
+        /* 중간에는 보임 */
+        filter: blur(0.1px);
+        /* 흐림 효과 줄어듬 */
+        transform: scale(1);
+        /* 정상 크기로 */
     }
+
     100% {
-        opacity: 0.9; /* 다시 투명하게 */
-        filter: blur(1px); /* 흐림 효과 다시 증가 */
-        transform: scale(0.8); /* 크기가 커짐 */
+        opacity: 0.9;
+        /* 다시 투명하게 */
+        filter: blur(0.6px);
+        /* 흐림 효과 다시 증가 */
+        transform: scale(0.8);
+        /* 크기가 커짐 */
     }
 }
 
 .keyword02 {
     font-family: "Shizuru", system-ui;
-    font-size: 1vw;
+    font-size: 8px;
     padding: 0px;
     margin-bottom: 10px;
     cursor: pointer;
     opacity: 70%;
-    display: flex; /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
+    display: flex;
+    /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
     flex-wrap: wrap;
-    animation: watercolorEffect02 5s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+    animation: watercolorEffect02 5s infinite ease-in-out;
+    /* 수채화 물감 효과 추가 */
 }
+
 /* 글자 수채화 물감처럼 퍼지는 효과 */
 @keyframes watercolorEffect02 {
     0% {
-        opacity: 0.8; /* 처음에 투명 */
-        filter: blur(1px); /* 흐림 효과 */
-        transform: scale(1); /* 작은 크기로 시작 */
+        opacity: 0.9;
+        /* 처음에 투명 */
+        filter: blur(0.6px);
+        /* 흐림 효과 */
+        transform: scale(1);
+        /* 작은 크기로 시작 */
     }
+
     50% {
-        opacity: 0.3; /* 중간에는 보임 */
-        filter: blur(0.5px); /* 흐림 효과 줄어듬 */
-        transform: scale(0.8); /* 정상 크기로 */
+        opacity: 0.6;
+        /* 중간에는 보임 */
+        filter: blur(0.3px);
+        /* 흐림 효과 줄어듬 */
+        transform: scale(0.8);
+        /* 정상 크기로 */
     }
+
     100% {
-        opacity: 0.6; /* 다시 투명하게 */
-        filter: blur(0.2px); /* 흐림 효과 다시 증가 */
-        transform: scale(1); /* 크기가 커짐 */
+        opacity: 0.8;
+        /* 다시 투명하게 */
+        filter: blur(0.1px);
+        /* 흐림 효과 다시 증가 */
+        transform: scale(1);
+        /* 크기가 커짐 */
     }
 }
 
 
 .keyword03 {
     font-family: "Shizuru", system-ui;
-    font-size: 1vw;
+    font-size: 8px;
     padding: 0px;
     margin-bottom: 10px;
     cursor: pointer;
     opacity: 70%;
-    display: flex; /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
+    display: flex;
+    /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
     flex-wrap: wrap;
-    animation: watercolorEffect03 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+    animation: watercolorEffect03 6s infinite ease-in-out;
+    /* 수채화 물감 효과 추가 */
 }
+
 /* 글자 수채화 물감처럼 퍼지는 효과 */
 @keyframes watercolorEffect03 {
     0% {
-        opacity: 0.8; /* 처음에 투명 */
-        filter: blur(1px); /* 흐림 효과 */
-        transform: scale(0.9); /* 작은 크기로 시작 */
+        opacity: 0.8;
+        /* 처음에 투명 */
+        filter: blur(0.6px);
+        /* 흐림 효과 */
+        transform: scale(0.9);
+        /* 작은 크기로 시작 */
     }
+
     50% {
-        opacity: 0.5; /* 중간에는 보임 */
-        filter: blur(0.8px); /* 흐림 효과 줄어듬 */
-        transform: scale(1); /* 정상 크기로 */
+        opacity: 0.6;
+        /* 중간에는 보임 */
+        filter: blur(0.3px);
+        /* 흐림 효과 줄어듬 */
+        transform: scale(1);
+        /* 정상 크기로 */
     }
+
     100% {
-        opacity: 0.9; /* 다시 투명하게 */
-        filter: blur(0.5px); /* 흐림 효과 다시 증가 */
-        transform: scale(0.9); /* 크기가 커짐 */
+        opacity: 0.9;
+        /* 다시 투명하게 */
+        filter: blur(0.2px);
+        /* 흐림 효과 다시 증가 */
+        transform: scale(0.9);
+        /* 크기가 커짐 */
     }
 }
 
@@ -245,18 +308,21 @@ canvas {
 
 /* 미세한 색 변화나 강조 */
 .keyword:hover {
-    color: #FF6347; /* Hover 시 텍스트 색상 변경 */
+    color: #FF6347;
+    /* Hover 시 텍스트 색상 변경 */
 }
 
 .dictionary {
     font-family: "Shizuru", system-ui;
-    font-size: 1.2vw;
+    font-size: 9px;
     opacity: 80%;
     padding: 10px;
     padding-left: 0px;
-    display: flex; /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
+    display: flex;
+    /* 글자들이 줄바꿈 없이 나열될 수 있도록 */
     flex-wrap: wrap;
-    animation: watercolorEffect04 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+    animation: watercolorEffect04 6s infinite ease-in-out;
+    /* 수채화 물감 효과 추가 */
 }
 
 .clickDictionary {
@@ -267,25 +333,37 @@ canvas {
     color: rgb(22, 22, 22);
     opacity: 100%;
     padding-top: 30px;
-    animation: watercolorEffect04 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+    animation: watercolorEffect04 6s infinite ease-in-out;
+    /* 수채화 물감 효과 추가 */
 }
 
 /* 글자 수채화 물감처럼 퍼지는 효과 */
 @keyframes watercolorEffect04 {
     0% {
-        opacity: 1; /* 처음에 투명 */
-        filter: blur(1px); /* 흐림 효과 */
-        transform: scale(1); /* 작은 크기로 시작 */
+        opacity: 1;
+        /* 처음에 투명 */
+        filter: blur(1px);
+        /* 흐림 효과 */
+        transform: scale(1);
+        /* 작은 크기로 시작 */
     }
+
     50% {
-        opacity: 1; /* 중간에는 보임 */
-        filter: blur(0.8px); /* 흐림 효과 줄어듬 */
-        transform: scale(1); /* 정상 크기로 */
+        opacity: 1;
+        /* 중간에는 보임 */
+        filter: blur(0.8px);
+        /* 흐림 효과 줄어듬 */
+        transform: scale(1);
+        /* 정상 크기로 */
     }
+
     100% {
-        opacity: 1; /* 다시 투명하게 */
-        filter: blur(0.5px); /* 흐림 효과 다시 증가 */
-        transform: scale(1); /* 크기가 커짐 */
+        opacity: 1;
+        /* 다시 투명하게 */
+        filter: blur(0.5px);
+        /* 흐림 효과 다시 증가 */
+        transform: scale(1);
+        /* 크기가 커짐 */
     }
 }
 
@@ -306,7 +384,7 @@ canvas {
     line-height: 1.2;
     margin-bottom: 30px;
     padding-bottom: 10px;
-    text-align: justify ;
+    text-align: justify;
 }
 
 .Paragraph14px {
@@ -423,7 +501,8 @@ h3 {
     color: #626262;
     text-align: right;
     opacity: 70%;
-    animation: watercolorEffect04 6s infinite ease-in-out; /* 수채화 물감 효과 추가 */
+    animation: watercolorEffect04 6s infinite ease-in-out;
+    /* 수채화 물감 효과 추가 */
     margin-bottom: 30px;
 }
 
@@ -640,8 +719,10 @@ h3 {
     word-wrap: break-word;
 }
 
-.EssayBodyhidden-text i, .EssayBodyhidden-text b {
-    display: inline; /* 기본적으로 inline 요소로 처리 */
+.EssayBodyhidden-text i,
+.EssayBodyhidden-text b {
+    display: inline;
+    /* 기본적으로 inline 요소로 처리 */
 }
 
 
@@ -855,34 +936,46 @@ img {
 
 .shalhoubvideo {
     position: sticky;
-    top: 20px; /* 화면 상단에서 20px 떨어지게 */
-    left: 80%;  /* 화면의 60% 지점부터 오른쪽에 위치 */
-    width: 90%; /* 20% 공간에 sticky로 배치 */
+    top: 20px;
+    /* 화면 상단에서 20px 떨어지게 */
+    left: 80%;
+    /* 화면의 60% 지점부터 오른쪽에 위치 */
+    width: 90%;
+    /* 20% 공간에 sticky로 배치 */
     z-index: 100;
     opacity: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 이미지에 그림자 추가 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 이미지에 그림자 추가 */
     transition: transform 1s ease;
 }
 
 .bergervideo {
     position: sticky;
-    top: 20px; /* 화면 상단에서 20px 떨어지게 */
-    left: 80%;  /* 화면의 60% 지점부터 오른쪽에 위치 */
-    width: 90%; /* 20% 공간에 sticky로 배치 */
+    top: 20px;
+    /* 화면 상단에서 20px 떨어지게 */
+    left: 80%;
+    /* 화면의 60% 지점부터 오른쪽에 위치 */
+    width: 90%;
+    /* 20% 공간에 sticky로 배치 */
     z-index: 100;
     opacity: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 이미지에 그림자 추가 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 이미지에 그림자 추가 */
     transition: transform 1s ease;
 }
 
 
 
 /* 오른쪽에 sticky로 떠있는 비디오 이미지 */
-.sticky-video-container01, .sticky-video-container03 {
+.sticky-video-container01,
+.sticky-video-container03 {
     position: sticky;
-    top: 20px; /* 화면 상단에서 20px 떨어지게 */
-    left: 99%;  /* 화면의 60% 지점부터 오른쪽에 위치 */
-    width: 20%; /* 20% 공간에 sticky로 배치 */
+    top: 20px;
+    /* 화면 상단에서 20px 떨어지게 */
+    left: 99%;
+    /* 화면의 60% 지점부터 오른쪽에 위치 */
+    width: 20%;
+    /* 20% 공간에 sticky로 배치 */
     z-index: 100;
     transition: transform 1s ease;
 }
@@ -890,9 +983,12 @@ img {
 /* 오른쪽에 sticky로 떠있는 비디오 이미지 */
 .sticky-video-container02 {
     position: sticky;
-    top: 20px; /* 화면 상단에서 20px 떨어지게 */
-    left: 99%;  /* 화면의 60% 지점부터 오른쪽에 위치 */
-    width: 20%; /* 20% 공간에 sticky로 배치 */
+    top: 20px;
+    /* 화면 상단에서 20px 떨어지게 */
+    left: 99%;
+    /* 화면의 60% 지점부터 오른쪽에 위치 */
+    width: 20%;
+    /* 20% 공간에 sticky로 배치 */
     z-index: 100;
     transition: transform 1s ease;
 }
@@ -900,9 +996,12 @@ img {
 
 /* sticky 비디오 이미지 스타일 */
 .sticky-video {
-    width: 100%;  /* 20% 공간에 꽉 차게 */
-    border-radius: 8px; /* 약간의 테두리 반경 추가 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 이미지에 그림자 추가 */
+    width: 100%;
+    /* 20% 공간에 꽉 차게 */
+    border-radius: 8px;
+    /* 약간의 테두리 반경 추가 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 이미지에 그림자 추가 */
     transition: transform 1s ease;
 }
 
@@ -925,16 +1024,20 @@ img {
 
 
 .gif-container {
-    text-align: center; /* 중앙 정렬 */
+    text-align: center;
+    /* 중앙 정렬 */
 }
 
 .gifcontainerimg {
-    width: 70%; /* GIF 크기 설정 */
+    width: 70%;
+    /* GIF 크기 설정 */
     opacity: 100%;
     margin-right: 0%;
     margin-left: 30%;
-    height: auto; /* 비율을 유지하면서 높이를 자동으로 설정 */
-    border-radius: 10px; /* GIF의 둥근 모서리 */
+    height: auto;
+    /* 비율을 유지하면서 높이를 자동으로 설정 */
+    border-radius: 10px;
+    /* GIF의 둥근 모서리 */
 }
 
 
