@@ -351,9 +351,10 @@ const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         const hiddenText = entry.target;
         if (entry.isIntersecting) {
+            // 텍스트가 화면에 들어오면 'active' 클래스를 추가
             hiddenText.classList.add('active');
-        } else {
-            hiddenText.classList.remove('active');
+            // observer를 disconnect하여 한 번만 활성화되게 만들기
+            observer.unobserve(entry.target);
         }
     });
 }, options);
