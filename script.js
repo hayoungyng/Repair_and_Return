@@ -158,9 +158,11 @@ document.querySelectorAll('.quote-container1, .quote-container2, .EssayBodyHidde
 const stickyElement1 = document.querySelector('.sticky-video-container01');
 const stickyElement2 = document.querySelector('.sticky-video-container02');
 const stickyElement3 = document.querySelector('.sticky-video-container03');
+const stickyElement4 = document.querySelector('.device-warning');
 const stopPoint1 = document.querySelector('.invisiblespacing02'); // 첫 번째 stop point
 const stopPoint2 = document.querySelector('.clicknote02'); // 두 번째 stop point (예시)
 const stopPoint3 = document.querySelector('.invisiblespacing03');
+const stopPoint4 = document.querySelector('.titleblock');
 
 // 스크롤 이벤트 리스너
 window.addEventListener('scroll', function() {
@@ -176,6 +178,11 @@ window.addEventListener('scroll', function() {
      const stopPointBottom3 = stopPoint3.offsetTop + stopPoint3.offsetHeight;
      const stickyElement3Top = stickyElement3.getBoundingClientRect().top + window.scrollY;
     
+    // 4 번째 sticky 요소의 위치
+    const stopPointBottom4 = stopPoint4.offsetTop + stopPoint4.offsetHeight;
+    const stickyElement4Top = stickyElement4.getBoundingClientRect().top + window.scrollY;
+
+
     // 첫 번째 sticky 요소 처리
     if (window.scrollY + window.innerHeight > stopPointBottom1) {
         stickyElement1.style.position = 'absolute';
@@ -213,6 +220,19 @@ window.addEventListener('scroll', function() {
         stickyElement3.style.top = '20px';
         stickyElement3.style.opacity = '1';
         stickyElement3.style.transition = 'opacity 0.5s ease';
+    }
+
+    // 4 번째 sticky 요소 처리
+    if (window.scrollY + window.innerHeight > stopPointBottom4) {
+        stickyElement4.style.position = 'absolute';
+        stickyElement4.style.top = `${stopPointBottom4 - stickyElement4.offsetHeight}px`; 
+        stickyElement4.style.opacity = '0';
+        stickyElement4.style.transition = 'opacity 0.5s ease';
+    } else {
+        stickyElement4.style.position = 'sticky';
+        stickyElement4.style.top = '20px';
+        stickyElement4.style.opacity = '0.7';
+        stickyElement4.style.transition = 'opacity 0.5s ease';
     }
 
 

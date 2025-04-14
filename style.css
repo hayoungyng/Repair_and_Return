@@ -54,7 +54,7 @@ canvas {
     padding-top: 0px;
 }
 
-#device-warning {
+.device-warning {
     color: #721c24; 
     padding: 10px; 
     opacity: 50%;
@@ -479,6 +479,9 @@ h3 {
     font-style: normal;
 }
 
+.titleblock {
+    opacity: 100%;
+}
 
 .title {
     font-family: "Rock 3D", system-ui;
