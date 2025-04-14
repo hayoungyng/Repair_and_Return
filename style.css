@@ -671,7 +671,7 @@ h3 {
 }
 
 .hidden-text.active {
-    max-height: 900px;
+    max-height: 1200px;
     opacity: 1;
     transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out;
 }
@@ -694,7 +694,7 @@ h3 {
 }
 
 .hidden-text2.active {
-    max-height: 900px;
+    max-height: 1200px;
     opacity: 1;
     transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out;
 }
@@ -730,7 +730,7 @@ h3 {
 
 
 .EssayBodyhidden-text.active {
-    max-height: 500px;
+    max-height: 1200px;
     opacity: 1;
     transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out;
 }
@@ -738,7 +738,7 @@ h3 {
 .quote-container1.active .hidden-text,
 .quote-container2.active .hidden-text2,
 .EssayBodyHidden.active .EssayBodyhidden-text {
-    max-height: 500px;
+    max-height: 1200px;
     opacity: 1;
 }
 
